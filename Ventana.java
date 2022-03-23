@@ -11,7 +11,7 @@ import javax.swing.JTextField;
  * Muestra la estructuta que deberia tener una Ventana en Java con la libreria
  * Swing, contiene una etiqueta, un caja de texto y un boton, que tiene la
  * accion de mostrar el texto en la caja por una ventana de mensaje.
- * @author Daniel Alvarez (a3dany)
+ * @author Daniel Alvarez (a3dany)git init
  */
 public class Ventana extends JFrame implements ActionListener {
 
@@ -40,7 +40,7 @@ public class Ventana extends JFrame implements ActionListener {
         caja = new JTextField();
         boton = new JButton();
         // configuramos los componentes
-        texto.setText("Inserte Nombre");    // colocamos un texto a la etiqueta
+        texto.setText("Inserte ");    // colocamos un texto a la etiqueta
         texto.setBounds(50, 50, 100, 25);   // colocamos posicion y tamanio al texto (x, y, ancho, alto)
         caja.setBounds(150, 50, 100, 25);   // colocamos posicion y tamanio a la caja (x, y, ancho, alto)
         boton.setText("Mostrar Mensaje");   // colocamos un texto al boton
@@ -52,11 +52,7 @@ public class Ventana extends JFrame implements ActionListener {
         this.add(boton);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String nombre = caja.getText();                                 // obtenemos el contenido de la caja de texto
-        JOptionPane.showMessageDialog(this, "Hola " + nombre + ".");    // mostramos un mensaje (frame, mensaje)
-    }
+  
 
     public static void main(String[] args) {
         Ventana V = new Ventana();      // creamos una ventana
