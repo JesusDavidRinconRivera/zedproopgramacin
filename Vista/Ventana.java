@@ -52,7 +52,7 @@ public class Ventana extends JFrame implements ActionListener {
         this.add(boton);
     }
 
-  
+
 
     public static void main(String[] args) {
         Ventana V = new Ventana();      // creamos una ventana
