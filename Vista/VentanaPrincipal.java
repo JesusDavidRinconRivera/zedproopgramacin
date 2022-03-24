@@ -13,13 +13,13 @@ import javax.swing.JTextField;
  * accion de mostrar el texto en la caja por una ventana de mensaje.
  * @author Daniel Alvarez (a3dany)
  */
-public class Ventana extends JFrame implements ActionListener {
+public class VentanaPrincipal extends JFrame implements ActionListener {
 
     private JLabel texto;           // etiqueta o texto no editable
     private JTextField caja;        // caja de texto, para insertar datos
     private JButton boton;          // boton con una determinada accion
 
-    public Ventana() {
+    public VentanaPrincipal() {
         super();                    // usamos el contructor de la clase padre JFrame
         configurarVentana();        // configuramos la ventana
         inicializarComponentes();   // inicializamos los atributos o componentes
@@ -58,8 +58,5 @@ public class Ventana extends JFrame implements ActionListener {
         JOptionPane.showMessageDialog(this, "Hola " + nombre + ".");    // mostramos un mensaje (frame, mensaje)
     }
 
-    public static void main(String[] args) {
-        Ventana V = new Ventana();      // creamos una ventana
-        V.setVisible(true);             // hacemos visible la ventana creada
-    }
+
 }
