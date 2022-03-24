@@ -20,12 +20,14 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     }
 
     private void configurarVentana() {
-        this.setTitle("Esta Es Una Ventana");                   // colocamos titulo a la ventana
-        this.setSize(310, 210);                                 // colocamos tamanio a la ventana (ancho, alto)
-        this.setLocationRelativeTo(null);                       // centramos la ventana en la pantalla
-        this.setLayout(null);                                   // no usamos ningun layout, solo asi podremos dar posiciones a los componentes
-        this.setResizable(false);                               // hacemos que la ventana no sea redimiensionable
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // hacemos que cuando se cierre la ventana termina todo proceso
+      int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+      int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        this.setTitle("Esta Es Una Ventana");
+        this.setBounds((ancho / 2) - (this.getWidth() / 2), (alto / 2) - (this.getHeight() / 2), 500, 500);
+        this.setLocationRelativeTo(null);
+        this.setLayout(null);
+        this.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     private void inicializarComponentes() {
